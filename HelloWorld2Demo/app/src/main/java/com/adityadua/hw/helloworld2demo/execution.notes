@@ -1,0 +1,16 @@
+Steps (Only Once we need to follow it !):
+1. You should have an AVD
+2. If not , you can create an AVD
+3. Create a AVD by going to the Tools => Android => AVD Manager
+4. In the AVD Manager : you will click create a Virtual Device
+5. One the dailog box , you need to choose the device defination
+6. You need to choose the version (it will depend on :: API level)
+For example : you can choose either API 15 & arm processor
+7. You also need to make sure that you are having HAXM installed into your system
+8. Customize your AVD ,
+            by giving it a name
+            by the size of SD card
+            by the RAM
+            by camera
+9. Create AVD
+10. Start / Play

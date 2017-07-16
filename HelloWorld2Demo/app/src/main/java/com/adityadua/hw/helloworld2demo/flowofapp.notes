@@ -1,0 +1,6 @@
+Manifest =>
+search for Launcher tag ::
+
+Imagine : you in a mid of task and the users pauses the app
+
+DB connection | you will close that first & the close the activity
