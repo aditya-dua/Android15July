@@ -1,0 +1,10 @@
+Intent :
+Basically are message passing objects.. Message PAssing ?
+
+What should happen when you login => Data is validated
+you will move to the next page... => need to pass the userName...
+
+In ANdroid to pass data between two activities or any 2 android components ,
+you use something as ::: Intentssssssssss !
+
+Even opening of second page or another activity is done using intents...
