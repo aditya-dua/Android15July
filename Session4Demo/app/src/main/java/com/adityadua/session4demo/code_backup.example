@@ -1,0 +1,62 @@
+restv =(TextView)findViewById(R.id.textView2);
+        //restv.setVisibility(TextView.INVISIBLE);
+        logsBtn = (Button) findViewById(R.id.logBtn);
+        logsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Demo Of Logs...
+                // Logs :: Information/ Text to help developers with the process
+                // of execution
+                // Different types of Logs available in ANdroid :
+                // 1. Very Critical : failure in the application
+                // 2. Error Logs    : shownwhen the system the catch
+                // 3. Debug Logs    : When we are running the app in debug mode
+                // 4. Verbose :
+                // 5. Info :
+
+                try{
+                    int a,b,c;
+                    a=10;
+                    b=0;
+                    Log.d("Values of a,b &c are :",a+" "+b );
+                    //c=10/
+                    c=a/b;
+
+
+                }catch (ArithmeticException e){
+                    // tags : max 23 chars : className + methodName
+                    Log.wtf("Failure in Catch",e.toString());
+                    Log.e("Catch Block : Exception",e.toString());
+                }
+
+
+
+            }
+        });
+
+        // We are having a button in XML.. tht buttons needs to be controlled form myJava code
+        //R.java : id : int addbtn : 0x7676667676;
+
+        num1Edt = (EditText)findViewById(R.id.editText3);
+        num2Edt = (EditText)findViewById(R.id.editText5);
+
+
+        sumBtn = (Button) findViewById(R.id.addbtn);
+        sumBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int a = Integer.parseInt(num1Edt.getText().toString());
+                int b = Integer.parseInt(num2Edt.getText().toString());
+
+                int c = a+b;
+                //restv.setVisibility(TextView.VISIBLE);
+                Log.d("TextView Id ::",restv.toString());
+                restv.setText(Integer.toString(c));
+                Toast.makeText(MainActivity.this, "The sum is : "+c, Toast.LENGTH_SHORT).show();
+
+
+
+
+            }
+        });
+    }

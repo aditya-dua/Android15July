@@ -28,6 +28,10 @@ public class SecondActivity extends Activity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.interface_event);
 
+        if(savedInstanceState != null){
+            // you will set the values to previous
+            String score=savedInstanceState.getString("HighScore");
+        }
         edt = (EditText)findViewById(R.id.editText);
 
         rbfemale = (RadioButton)findViewById(R.id.radioButton2);
@@ -63,6 +67,8 @@ public class SecondActivity extends Activity implements View.OnClickListener{
         if(v.getId()==R.id.login){
             String msg="Toast IS ::"+edt.getText().toString();
             Toast.makeText(getApplicationContext(),msg,Toast.LENGTH_LONG).show();
+            toast.setBackground(R.mipmap.ic_launcher);
+
         }
         else if(v.getId()==R.id.button3){
             if(rbmale.isChecked()){
@@ -80,5 +86,13 @@ public class SecondActivity extends Activity implements View.OnClickListener{
                 Toast.makeText(getApplicationContext(),"Game I like : FootBall",Toast.LENGTH_LONG).show();
             }
         }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+
+        outState.putString("Highscore","500");
+
     }
 }

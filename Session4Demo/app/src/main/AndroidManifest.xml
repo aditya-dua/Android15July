@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.adityadua.session3components">
-<!-- Permissions | Details about SDK | Application Details(All the components)-->
-    <uses-permission android:name="android.permission.READ_SMS">
-    </uses-permission>
-
+    package="com.adityadua.session4demo">
 
     <application
         android:allowBackup="true"
@@ -12,11 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!-- Components Start here  : Activity , Service , COntent Providors & Broadcast Receivers -->
         <activity android:name=".MainActivity">
-
-        </activity>
-        <activity android:name=".SecondActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

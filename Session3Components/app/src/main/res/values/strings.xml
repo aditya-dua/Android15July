@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Session3Components</string>
+    <string name="button_1_text">Click for Show Toast </string>
+    <string name="button_2_text">Check Gender</string>
+    <string name="button_3_text">Show Games</string>
+    <string name="hello_world">Hello World,India!</string>
 </resources>

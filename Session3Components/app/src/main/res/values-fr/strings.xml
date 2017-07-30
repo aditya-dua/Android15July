@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Session3ComponentsFrench</string>
+    <string name="button_1_text">Click for Show ToastFrench</string>
+    <string name="button_2_text">Check GenderFrecnch</string>
+    <string name="button_3_text">Show GamesFrench</string>
+
+
+</resources>
