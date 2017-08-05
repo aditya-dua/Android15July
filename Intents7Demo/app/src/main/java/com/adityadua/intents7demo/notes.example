@@ -1,0 +1,14 @@
+Intent :
+Message passing objects..
+
+We can open different activities using Intents
+Can we open different applications also using Intents?
+
+2types of intent :
+Implict & Explict
+
+When we open default intents.....: calc , browser,camera , peolpe , message
+
+Implict : Defualt : intent to open camera, intent to start music ,intent fr calc
+
+Intents that we write are called as Explict Intent...
