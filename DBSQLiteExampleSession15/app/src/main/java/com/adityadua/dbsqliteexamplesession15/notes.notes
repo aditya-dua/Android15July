@@ -1,0 +1,87 @@
+
+insert into employee (name,number,salary) values ('Aditya','123456789',11111);
+
+tableName , 'Aditya','123456789',11111 and I create the automatically automatically
+
+So Android did it for you !
+
+How ? You create a MAP:::
+
+Key                  Value
+
+name                 Aditya
+number               123456789
+salary               111111
+
+android will write the query for you !
+
+insert into employee (name,number,salary) values ('Aditya','123456789',11111);
+
+insert into employee (name,
+Create a final string query :
+string 1 + string 2 + string 3;
+
+
+Query is created automatically::::
+
+this map has been named as ContentValues :::::
+
+ContentValues cv = new ContentValues();
+cv.put("name","Aditya");
+
+What are Cursor ?
+DB Pointers.. what that means basically cursor are the objects that point to a
+particular row in the DB.
+
+For Example :
+Student
+
+StudentID   StudentName     StudentClass    StudentAge
+1           Aditya          10              16
+2           Rohan           12              18
+3           Ram             10              15
+
+Cursor c = db.execSQL(Select * from student);
+
+         StudentID   StudentName     StudentClass    StudentAge
+c   =>       1           Aditya          10              16
+             2           Rohan           12              18
+             3           Ram             10              15
+
+The advantage of using cursor is that ::: it will help you identify which row youa re working on
+
+Cursor c = db.execSQL(Select StudentID,StudentName from student where studnetClass=12);
+        0               1
+c=> StudnetId      StudentName
+    2               Rohan
+
+
+How do you move the cursor ?
+Move the cursor with help of its inbuilt methods...
+1. c.moveToFirst();
+2. c.moveToLast();
+3. c.moveTo(position);
+4. c.hasNext();
+5. c.next();
+
+How will you fetch the vlaues for the cursor ?
+c.getString(columnIndex)
+
+c.getString(1);
+
+
+Select Query ::
+
+Select StudentID,StudentName from student where studnetClass=12
+First flavour ::
+.query(false,tabName)
+1. Distinct
+2. Table Name
+3. array Of Columns
+4. where
+5. where args .....
+6. having
+7. orderBy :: ex : StudentID DSC
+8. limit
+
+COntext : activity & applictaion : this & getApplicationContext()
