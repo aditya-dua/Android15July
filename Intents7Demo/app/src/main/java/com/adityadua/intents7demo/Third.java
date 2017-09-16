@@ -1,6 +1,7 @@
 package com.adityadua.intents7demo;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -23,7 +24,24 @@ public class Third extends Activity {
     ImageView image;
     private final int CAMERA_REQUEST=100;
     private final int GALLERY_IMAGE=105;
+    Context context = getApplicationContext();
+// Intets are used : to start a new Activity & a new Service
+    // when you want the Intents to Explict Intent you need but you dont need when
+    // you are using implict intent.
+// you use intents to start different components....
 
+    // Explict Intent : which we use to create for our application and we mention
+    //which results should be shown ?
+
+    // Implict Intent : When you start an Intent and you dont know the exact target of the inent
+
+    // to start the camera Intent : MediaStore.ACTION_IMAGE_CAPTURE
+    // to dail : ACTION_VIEW,Uri.parse("tel:123456")
+
+    // Context is your current class / app object
+    // package / details about app / variables
+    // getActivityContext()
+    // getApplicationContext()
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +53,13 @@ public class Third extends Activity {
         TextView tv = (TextView)findViewById(R.id.textView3);
         String userName = i.getStringExtra("userName");
         tv.setText("Good Morning "+userName+"!,");
+        int age = i.getIntExtra("age",1);
+
+        Toast.makeText(context, "Age is :"+age, Toast.LENGTH_SHORT).show();
+// example : you fire an intent to start the camera
+        // you click a image
+        // there would be a method which would be called once there is response..
+
         camera = (Button)findViewById(R.id.button3);
         image = (ImageView)findViewById(R.id.imageView);
         camera.setOnClickListener(new View.OnClickListener() {

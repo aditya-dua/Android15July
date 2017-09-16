@@ -11,6 +11,14 @@ import android.widget.EditText;
  * Created by AdityaDua on 05/08/17.
  */
 
+// Intents : are basically the message passing objects...
+    // what type of message :
+    // they can pass data about the activity & which activity is to be started
+
+    // We can open a new Activity as well as pass some data which needs to be used.
+    // Pass Data : using Bundles / putExtra
+
+
 public class SecondActivity extends Activity {
 
     EditText userEdt,pwdEdt;
@@ -32,6 +40,7 @@ public class SecondActivity extends Activity {
                 if(userName.equalsIgnoreCase("AcadGild") && pwd.equals("acadgild")){
                     Intent i = new Intent(SecondActivity.this,Third.class);
                     i.putExtra("userName",userName);
+                    i.putExtra("age",23);
                     startActivity(i);
                 }
 
