@@ -1,0 +1,14 @@
+How can I see the data of other application ?
+SMS / Logs / Contact :
+
+Does android allows you to share the data across other apps ?  YES
+
+
+Content Providors :
+So any application can share their db and then give the UrL that is needed to
+access the data.
+
+now when the other applictaion is using the data it will a Content Resolver which
+will help to fetch the data from the content providor
+
+Content Reader to read cobtacts from my phone
