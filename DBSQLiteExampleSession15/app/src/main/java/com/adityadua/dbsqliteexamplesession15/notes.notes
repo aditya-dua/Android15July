@@ -47,7 +47,7 @@ Cursor c = db.execSQL(Select * from student);
 c   =>       1           Aditya          10              16
              2           Rohan           12              18
              3           Ram             10              15
-
+c.moveNext();
 The advantage of using cursor is that ::: it will help you identify which row youa re working on
 
 Cursor c = db.execSQL(Select StudentID,StudentName from student where studnetClass=12);
@@ -85,3 +85,44 @@ First flavour ::
 8. limit
 
 COntext : activity & applictaion : this & getApplicationContext()
+
+MainActivity :
+All the views of the XML are given funcationalties over here
+For Ex : A list is shown with Employee Names
+DB : FetchEmploee Or FetchCoulmn
+
+Second Task would be : I will need to update or delete the information
+On click of a item in the list , I will call the Intent to open the Next Activity
+
+
+Inserting :
+Content Values :
+
+
+Insert into student (studentId,studentName,studentRoll) values
+('1','Aditya',1)
+
+Insert : there will a relation :
+studentId : 1
+studentName : Aditya
+studentRoll : 1
+
+If such is a Case then we rae we writing the query
+
+
+Map : Key & Value
+Content Values in Android
+
+ContentValues cv = new ContentValues();
+cv.add("StudentId",1);
+cv.add("StudentName","Aditya");
+cv.add("StudentRoll",1);
+
+
+Insert in DB
+
+studetails.insert(cv);
+
+select * from student where studentID=1 order by StudentName;
+
+

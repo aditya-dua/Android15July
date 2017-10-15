@@ -28,6 +28,8 @@ which will call the getInstance method of this class **/
     private final TablesClass dbHelperSQLiteOpenHelper;
     public static DBHelper db_helper = null;
 
+    // We are calling this method in the :: CommonUtilties
+
     public static DBHelper getInstance(Context c){
         try{
             if(db_helper == null){

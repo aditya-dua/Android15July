@@ -35,4 +35,5 @@ public class TablesClass extends SQLiteOpenHelper {
         context.deleteDatabase(Constants.DATABASE_NAME);
         onCreate(db);
     }
+
 }

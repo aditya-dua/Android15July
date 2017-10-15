@@ -51,13 +51,24 @@ public class AsyncTaskActivity extends Activity {
 
     }
 
+    // 3 parms
+    // input
+    // Update : Progress
+    // Output
+
     class LoadIconTask extends AsyncTask<Integer,Integer,Bitmap>{
+
+        // UI Thread
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
             progressBar.setVisibility(ProgressBar.VISIBLE);
         }
+// Most Important ::
+        // Not working on the Ui thread but is separte thread itself
+
+        // this will call method : publish progress which will work on the UI.
 
         @Override
         protected Bitmap doInBackground(Integer... params) {
